@@ -1,0 +1,8 @@
+.articles {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 80px;
+}
+h2 {
+  margin-bottom: 36px;
+}
