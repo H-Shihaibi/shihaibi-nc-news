@@ -21,6 +21,9 @@ const Topics = () => {
   return (
     <div>
       <div className="topics">
+        <Link key="allTopics" to={"/"}>
+          <button>All</button>
+        </Link>
         {topics.map((topic) => (
           <Link key={topic.slug} to={`/topics/${topic.slug}`}>
             <button value={topic.slug}>{topic.slug}</button>
