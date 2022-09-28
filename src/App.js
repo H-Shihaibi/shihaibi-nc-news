@@ -1,7 +1,7 @@
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
 import Home from "./pages/home/Home";
-import React from "react";
+import React, { useState } from "react";
 import Topics from "./pages/topics/Topics";
 
 function App() {
@@ -23,6 +23,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />}></Route>
             <Route path="/topics" element={<Topics />}></Route>
+            <Route path="/topics/:topic" element={<Home />}></Route>
           </Routes>
         </div>
       </main>
