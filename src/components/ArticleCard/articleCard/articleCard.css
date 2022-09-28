@@ -1,0 +1,23 @@
+.articleCard {
+  width: 350px;
+  height: 250px;
+  background: #ffffff;
+}
+.articleTitle {
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 12px;
+}
+.stats {
+  gap: 12px;
+}
+.top {
+  margin-bottom: 12px;
+}
+p {
+  color: #6b6b6b;
+  font-size: 14px;
+}
+.articleInfo {
+  margin-bottom: 12px;
+}
