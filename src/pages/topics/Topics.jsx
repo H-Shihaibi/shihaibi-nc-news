@@ -2,29 +2,28 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 
-const Topics = ({ topic, setTopic }) => {
+const Topics = () => {
   const [topics, setTopics] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
 
   useEffect(() => {
     axios.get("https://hstestncnews.herokuapp.com/api/topics").then(
       ({ data }) => {
         setTopics(data.topics);
+        setIsLoading(false);
       },
       [topics]
     );
   });
+
+  if (isLoading) return <h2>Loading...</h2>;
+
   return (
     <div>
-      <h2>Topics</h2>
       <div className="topics">
         {topics.map((topic) => (
           <Link key={topic.slug} to={`/topics/${topic.slug}`}>
-            <button
-              onClick={(e) => setTopic(e.target.value)}
-              value={topic.slug}
-            >
-              {topic.slug}
-            </button>
+            <button value={topic.slug}>{topic.slug}</button>
           </Link>
         ))}
       </div>
