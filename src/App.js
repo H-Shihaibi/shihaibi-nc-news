@@ -1,6 +1,8 @@
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
+import Comments from "./components/comments/Comments";
 import Home from "./pages/home/Home";
+import SingleArticle from "./pages/single_article/SingleArticle";
 import Topics from "./pages/topics/Topics";
 
 function App() {
@@ -23,6 +25,14 @@ function App() {
             <Route path="/" element={<Home />}></Route>
             <Route path="/topics" element={<Topics />}></Route>
             <Route path="/topics/:topic" element={<Home />}></Route>
+            <Route
+              path="/articles/:article_Id"
+              element={<SingleArticle />}
+            ></Route>
+            <Route
+              path="/articles/:article_id/comments"
+              element={<Comments />}
+            ></Route>
           </Routes>
         </div>
       </main>
