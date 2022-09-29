@@ -1,5 +1,6 @@
 import { Routes, Route, Link } from "react-router-dom";
 import "./App.css";
+import Comments from "./components/comments/Comments";
 import Home from "./pages/home/Home";
 import SingleArticle from "./pages/single_article/SingleArticle";
 import Topics from "./pages/topics/Topics";
@@ -27,6 +28,10 @@ function App() {
             <Route
               path="/articles/:article_Id"
               element={<SingleArticle />}
+            ></Route>
+            <Route
+              path="/articles/:article_id/comments"
+              element={<Comments />}
             ></Route>
           </Routes>
         </div>
