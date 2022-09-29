@@ -27,7 +27,12 @@ const Home = () => {
       <h2>{topic} Articles</h2>
       <div className="articles">
         {articles.map((article) => (
-          <ArticleCard article={article} key={article.article_id} />
+          <ArticleCard
+            article={article}
+            setArticles={setArticles}
+            articles={articles}
+            key={article.article_id}
+          />
         ))}
       </div>
     </div>

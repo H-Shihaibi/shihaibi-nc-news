@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Vote from "../vote/Vote";
 import "./articleCard.css";
 
 const ArticleCard = ({ article }) => {
@@ -19,7 +20,7 @@ const ArticleCard = ({ article }) => {
       </div>
       <div className="stats">
         <p>{article.comment_count} • Comments </p>
-        <p>{article.votes} • Votes </p>
+        <Vote article={article} />
       </div>
     </div>
   );
