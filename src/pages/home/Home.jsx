@@ -1,9 +1,8 @@
 import React, { useEffect, useState } from "react";
 import "./home.css";
-import ArticleCard from "../../components/ArticleCard/articleCard/ArticleCard";
+import ArticleCard from "../../components/article_card/ArticleCard";
 import { useParams } from "react-router-dom";
 import axios from "axios";
-import Topics from "../topics/Topics";
 
 const Home = () => {
   const [articles, setArticles] = useState([]);
@@ -26,10 +25,14 @@ const Home = () => {
   return (
     <div>
       <h2>{topic} Articles</h2>
-      <Topics />
       <div className="articles">
         {articles.map((article) => (
-          <ArticleCard article={article} key={article.article_id} />
+          <ArticleCard
+            article={article}
+            setArticles={setArticles}
+            articles={articles}
+            key={article.article_id}
+          />
         ))}
       </div>
     </div>
